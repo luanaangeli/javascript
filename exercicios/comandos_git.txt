@@ -1,0 +1,13 @@
+echo "# javascript" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/luanaangeli/javascript.git
+git push -u origin main
+
+
+git status - verifica os arquivos alterados
+git add <arquivo ou ponto (.) - para adicionar arquivos na area de 'staging'
+git commit -m "digitar a mensagem" - para confirmar os arquivos adicionados
+git push - para enviar os arquivo confirmados para o github

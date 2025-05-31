@@ -9,7 +9,8 @@ A raça com primeira letra maiuscula
 peso
 
  */
-
+/**
+// Gerador de tags de identificação
 const nome = "Dogo", raca = "vira-lata"
 let idade = 1, peso = 1.2, adotado =false
 
@@ -24,5 +25,19 @@ const animal = [{
 }]
 
 console.log(animal)
+*/
 
+function geradorDeTagsDeIdenficacao (nome, idade, peso, raca, adotado){
+   const nomeMaiusculo = nome.toUpperCase()
+   let primeiraLetraNome = raca.charAt(0).toUpperCase() + raca.slice(1).toLowerCase()
 
+   const tag = [{
+        nome: nomeMaiusculo,
+        peso: peso,
+        raca: primeiraLetraNome
+    }]
+
+    return tag;
+
+}
+console.log ( geradorDeTagsDeIdenficacao ('Dogo', 3, 1.2, 'vira-lata', 'sim' ))

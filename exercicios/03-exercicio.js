@@ -20,7 +20,7 @@ idade 2 + porte M = sim, pela idade
 idade 2 + porte P = sim, pela idade
 idade 1 + porte P = sim, pelo porte
  */
-
+/**
 const idade = 0
 const porte = 'P'
 
@@ -37,24 +37,34 @@ const adocaov2 = idade >= idadeMinima || porte === 'P'
 console.log(adocao)
 console.log(adocaov2)
 
+
+it('QUANDO a idade = 1 + porte M, DEVE ser permitida a adoção', () => {
+    assert.strictEqual(verificarSePodeSerAdotado(1, 'M'), true)
+  })
+*/
+
+//const porte = 'P'
+
+
 function verificarSePodeSerAdotado(idade, porte) {
+  const idadeMinima = 1;
   const adocao = idade >= idadeMinima 
                 ? 'sim'
-                : porte === 'P' 
+                : porte === 'M' 
                 ? 'sim'
                 : 'não'
 
-  // return adocao
-  console.log(adocao)
+  return adocao
+  
 }
-
+verificarSePodeSerAdotado(1, 'M')
 // idade 1 + porte M = nao
 // idade 2 + porte M = sim, pela idade
 // idade 2 + porte P = sim, pela idade
 // idade 1 + porte P = sim, pelo porte
 
 verificarSePodeSerAdotado(1, 'M')
-verificarSePodeSerAdotado(2, 'M')
-verificarSePodeSerAdotado(2, 'P')
-verificarSePodeSerAdotado(1, 'P')
+//verificarSePodeSerAdotado(2, 'M')
+//verificarSePodeSerAdotado(2, 'P')
+//verificarSePodeSerAdotado(1, 'P')
 

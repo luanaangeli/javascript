@@ -6,7 +6,7 @@ import {
   calcularConsumoDeRacao,
   decidirTipoDeAtividadePorPorte,
   buscarDadoAsync
-} from '../trabalho.js';
+} from '../exercicios/trabalho.js';
 
 describe('Testes da disciplina - fundamentos JS', () => {
   
@@ -27,7 +27,7 @@ describe('Testes da disciplina - fundamentos JS', () => {
   });
 
   it('QUANDO buscar dado de exemplo, DEVE retornar um valor de forma assíncrona', async () => {
-    const resultado = await buscarDadoAsync();
+   const resultado = await buscarDadoAsync();
     assert.strictEqual(resultado, 'Pipoca');
   });
 
