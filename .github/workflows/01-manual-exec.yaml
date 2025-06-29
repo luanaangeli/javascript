@@ -1,0 +1,47 @@
+# CI nível 01 (pipeline 01) - Disparo manual a partir de 1 clique
+
+# nome do nosso 'pipeline'
+name: 'Pipeline n1 - Execução Manual'
+
+# regras de disparo (gatilhos/triggers)
+# gatilho de exec manual = workflow_dispatch
+
+on:
+  workflow_dispatch:
+
+#trabalhos/tarefas dentro do pipeline = jobs
+jobs:
+  unidade-test:
+
+  # maquina que o job vai executar
+  runs-on:  ubuntu-latest
+
+  #steps:
+    # clone do projeto
+    - uses: action/checkout@v4
+
+    # instalacao do node
+    - uses: action/setup-node@v4
+      with:
+        node-version: latest
+
+    #instalacao do yarn
+    - name: Instalando yarn
+      run:  npm install -g yarn
+
+    #instalacao das dependencias
+    - name: Instalando dependências
+      run: yarn 
+
+    # instalacao do Playwright
+    - name: Instalando Playwright
+      run: yarn playwright install
+
+    # executar os testes unitarios
+    - name: Executando Teste unitarios
+      run: yarn run test
+
+
+
+
+ 
