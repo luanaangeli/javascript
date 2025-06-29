@@ -16,7 +16,8 @@ jobs:
   # maquina que o job vai executar
   runs-on:  ubuntu-latest
 
-  #steps:
+  # passos do script de build
+  steps:
     # clone do projeto
     - uses: action/checkout@v4
 
