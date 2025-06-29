@@ -13,34 +13,34 @@ on:
 jobs:
   unidade-test:
 
-  # maquina que o job vai executar
-  runs-on:  ubuntu-latest
+    # maquina que o job vai executar
+    runs-on:  ubuntu-latest
 
-  # passos do script de build
-  steps:
-    # clone do projeto
-    - uses: action/checkout@v4
+    # passos do script de build
+    steps:
+      # clone do projeto
+      - uses: action/checkout@v4
 
-    # instalacao do node
-    - uses: action/setup-node@v4
-      with:
-        node-version: latest
+      # instalacao do node
+      - uses: action/setup-node@v4
+        with:
+          node-version: latest
 
-    #instalacao do yarn
-    - name: Instalando yarn
-      run:  npm install -g yarn
+      #instalacao do yarn
+      - name: Instalando yarn
+        run:  npm install -g yarn
 
-    #instalacao das dependencias
-    - name: Instalando dependências
-      run: yarn 
+      #instalacao das dependencias
+      - name: Instalando dependências
+        run: yarn 
 
-    # instalacao do Playwright
-    - name: Instalando Playwright
-      run: yarn playwright install
+      # instalacao do Playwright
+      - name: Instalando Playwright
+        run: yarn playwright install
 
-    # executar os testes unitarios
-    - name: Executando Teste unitarios
-      run: yarn run test
+      # executar os testes unitarios
+      - name: Executando Teste unitarios
+        run: yarn run test
 
 
 
