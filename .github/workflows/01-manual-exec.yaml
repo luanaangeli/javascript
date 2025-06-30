@@ -37,7 +37,7 @@ jobs:
       
       # executar os testes unitarios
       - name: Executando Teste
-        run: yarn run exercicio/trabalho.js 
+        run: yarn run exercicios/trabalho-final.js 
 
 
 
