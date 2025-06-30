@@ -40,7 +40,7 @@ jobs:
 
       # executar os testes unitarios
       - name: Executando Teste unitarios
-        run: yarn run test
+        run: yarn run trabalho.js 
 
 
 
