@@ -26,6 +26,14 @@ jobs:
         with:
           node-version: 22.x
 
+      # instalando yarn
+      - name: instalando yarn
+        run: npm install -g yarn
+
+      # instalando dependencias   
+      - name: instalando dependencias
+        run: yarn            
+
       # executar os testes unitarios
       - name: Executando Teste
         run: node exercicios/trabalho-final.js 
