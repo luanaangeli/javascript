@@ -1,7 +1,7 @@
 {
   "name": "javascript",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000j\u0000a\u0000v\u0000a\u0000s\u0000c\u0000r\u0000i\u0000p\u0000t\u0000\r\u0000 \u0000",
+  "description": "..",
   "main": "index.js",
   "type": "module",
   "scripts": {},
@@ -19,6 +19,8 @@
   "devDependencies": {
     "@playwright/test": "^1.53.1",
     "@types/node": "^24.0.7",
-    "mocha": "^11.5.0"
+    "mocha": "^11.5.0",
+    "jest": "^26.6.3",
+    "webpack": "^5.0.0"
   }
 }
