@@ -24,7 +24,7 @@ jobs:
       # instalacao do node
       - uses: actions/setup-node@v4
         with:
-          node-version: latest
+          node-version: 22.x
 
       #instalacao do yarn
       - name: Instalando yarn
