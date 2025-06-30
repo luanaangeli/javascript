@@ -34,10 +34,7 @@ jobs:
       - name: Instalando dependencias
         run: yarn 
 
-      # instalacao do Playwright
-      - name: Instalando Playwright
-        run:  yarn playwright install
-
+      
       # executar os testes unitarios
       - name: Executando Teste
         run: yarn run exercicio/trabalho.js 
