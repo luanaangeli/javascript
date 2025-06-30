@@ -31,16 +31,16 @@ jobs:
         run:  npm install -g yarn
 
       #instalacao das dependencias
-      - name: Instalando dependências
+      - name: Instalando dependencias
         run: yarn 
 
       # instalacao do Playwright
-      - name: setup playwright
-        uses: microsoft/playwright-github-action@v1
+      - name: Instalando Playwright
+        run:  yarn playwright install
 
       # executar os testes unitarios
-      - name: Executando Teste unitarios
-        run: yarn run trabalho.js 
+      - name: Executando Teste
+        run: yarn run exercicio/trabalho.js 
 
 
 
