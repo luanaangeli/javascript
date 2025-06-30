@@ -14,7 +14,7 @@ jobs:
   unidade-test:
 
     # maquina que o job vai executar
-    runs-on:  windows-2025
+    runs-on:  ubuntu-latest    
 
     # passos do script de build
     steps:
@@ -33,7 +33,6 @@ jobs:
       #instalacao das dependencias
       - name: Instalando dependencias
         run: yarn 
-
       
       # executar os testes unitarios
       - name: Executando Teste
